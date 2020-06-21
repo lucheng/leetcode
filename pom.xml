@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.cheng</groupId>
+	<artifactId>leetcode</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>leetcode</name>
+	<url>http://maven.apache.org</url>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.7.RELEASE</version>
+	</parent>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+		<maven.compiler.source>${jdk.version}</maven.compiler.source>
+		<maven.compiler.target>${jdk.version}</maven.compiler.target>
+		<maven.compiler.compilerVersion>${jdk.version}</maven.compiler.compilerVersion>
+		<druid-spring-boot-starter.version>1.1.21</druid-spring-boot-starter.version>
+		<mybatis.plus>3.3.2</mybatis.plus>
+		<mysql.version>8.0.20</mysql.version>
+		<shardingsphere.version>4.1.1</shardingsphere.version>
+		<shardingsphere.spi.impl.version>5.0.0-RC1-SNAPSHOT</shardingsphere.spi.impl.version>
+		<swagger-annotations.version>1.6.0</swagger-annotations.version>
+		<swagger2.version>2.9.2</swagger2.version>
+		<swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+		<guava-bom.version>28.1-jre</guava-bom.version>
+		<logback.version>1.2.3</logback.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
