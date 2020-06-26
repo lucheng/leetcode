@@ -1,35 +1,42 @@
 package org.cheng;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * 移除重复节点
+ * 空间复杂度：O(1)。
  * 
  * @author lucheng
  *
  */
-public class Solution {
+public class Solution2 {
 	public ListNode removeDuplicateNodes(ListNode head) {
 		if (head == null) {
 			return head;
 		}
-		Set<Integer> set = new HashSet<>();
-		set.add(head.val);
 		ListNode node = head;
 		while (node.next != null) {
-			if (set.add(node.next.val)) {
-				node = node.next;
-			} else {
+			boolean b = false;
+			ListNode node2 = head;
+			while (node2 != node.next) {
+				if (node2.val == node.next.val) {
+					b = true;
+					break;
+				} else {
+					node2 = node2.next;
+				}
+			}
+
+			if (b) {
 				node.next = node.next.next;
+			} else {
+				node = node.next;
 			}
 		}
 		return head;
 	}
 
 	public static void main(String[] args) {
-		Solution s = new Solution();
-		ListNode node1 = new ListNode(1);
+		Solution2 s = new Solution2();
+		ListNode node1 = new ListNode(2);
 		ListNode node2 = new ListNode(2);
 		ListNode node3 = new ListNode(3);
 		ListNode node4 = new ListNode(1);
